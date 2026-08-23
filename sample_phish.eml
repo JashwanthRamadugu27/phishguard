@@ -1,0 +1,45 @@
+From: "Microsoft Account Security" <no-reply@security-alert-msft-verify.top>
+To: employee@victim-enterprise.com
+Subject: [CRITICAL] Your Microsoft 365 Password Expires Today - Immediate Action Required
+Date: Sat, 22 Aug 2026 13:00:00 +0000
+Message-ID: <alert-928374@security-alert-msft-verify.top>
+Authentication-Results: mx.google.com; dkim=fail; spf=fail (google.com: domain of no-reply@security-alert-msft-verify.top does not designate 192.0.2.1 as permitted sender)
+Content-Type: multipart/alternative; boundary="boundary-m365-alert"
+
+--boundary-m365-alert
+Content-Type: text/plain; charset="utf-8"
+
+Microsoft Security Notice
+
+Dear User,
+
+Your corporate password for employee@victim-enterprise.com will expire in 2 hours.
+Failure to update your credentials will result in an immediate suspension of email and OneDrive access.
+
+Keep your same password or change it here:
+https://login.microsoftonline.security-alert-msft-verify.top/auth/update?user=employee@victim-enterprise.com
+
+Thank you,
+Microsoft 365 Global Security Operations
+
+--boundary-m365-alert
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif;">
+  <div style="max-width: 600px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
+    <h2 style="color: #0078d4;">Microsoft Security Alert</h2>
+    <p>Dear Valued User,</p>
+    <p>Your Microsoft 365 password is scheduled to expire in <strong>2 hours</strong>.</p>
+    <div style="margin: 25px 0;">
+      <a href="https://login.microsoftonline.security-alert-msft-verify.top/auth/update?user=employee@victim-enterprise.com" 
+         style="background-color: #0078d4; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold;">
+         Keep Current Password
+      </a>
+    </div>
+    <p style="color: #666; font-size: 12px;">This is an automated operational alert sent to employee@victim-enterprise.com.</p>
+  </div>
+</body>
+</html>
+--boundary-m365-alert--

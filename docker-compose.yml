@@ -1,0 +1,28 @@
+services:
+  phishing-sentinel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: phishing_sentinel_agent
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - MEMORY_DB_PATH=/app/data/sentinel_memory.db
+      - APP_ENV=production
+      - LOG_LEVEL=INFO
+    volumes:
+      # Persistent storage volume for SQLite memory database across container restarts
+      - sentinel_data:/app/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  sentinel_data:
+    driver: local
