@@ -146,17 +146,3 @@ docker compose logs -f
 docker compose exec phishing-sentinel python view_memory.py --db /app/data/sentinel_memory.db
 ```
 
----
-
-## 🎙️ 6. Presentation & Jury Script (How to Demo It)
-
-During your presentation, follow this 30-second live demo flow:
-
-1. **Point to Docker / IMAP Watcher Logs**:
-   *"Judges, our agent is running 24/7 in the background monitoring our corporate email inbox."*
-2. **Send a Test Email / Scan a Phishing Link**:
-   Send an email containing a credential harvester link (e.g. Bank of America phishing domain).
-3. **Show Real-Time Interception & Discord Alert**:
-   *"Within 8 seconds, the agent intercepts the message, checks VirusTotal & urlscan, passes forensic telemetry to Groq LLM, and dispatches a defanged critical alert to our Discord SecOps channel."*
-4. **Show SQLite Memory Audit (`view_memory.py`)**:
-   *"Notice how our database automatically logs the instance and correlates this attack under the Bank of America threat campaign, keeping track of how many times this brand has been targeted."*
